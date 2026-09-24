@@ -110,10 +110,10 @@
         
         <!-- Leadership Dropdown -->
         <div class="relative group py-2">
-          <button class="flex items-center gap-1 hover:text-brand-500 transition-colors focus:outline-none">
-            <span>Leadership</span>
+          <div class="flex items-center gap-1 hover:text-brand-500 transition-colors focus:outline-none">
+            <a href="#leadership" title="Academic Leadership Experience" class="hover:text-brand-500 transition-colors focus:outline-none"><span>Leadership</span></a>
             <i data-lucide="chevron-down" class="w-3.5 h-3.5 transition-transform group-hover:rotate-180"></i>
-          </button>
+          </div>
           <div class="dropdown-menu absolute left-0 top-full w-64 bg-white border border-slate-200 rounded-xl shadow-xl py-2 z-50 text-xs">
             <a href="#feni-university" class="block px-4 py-2.5 hover:bg-slate-50 hover:text-brand-700 transition">
               <span class="font-bold block text-slate-900">Feni University</span>
@@ -134,32 +134,139 @@
 
         <!-- Research & Publications Dropdown -->
         <div class="relative group py-2">
-          <button class="flex items-center gap-1 hover:text-brand-500 transition-colors focus:outline-none text-brand-700 font-bold">
-            <span>Research &amp; Publications</span>
+          <div class="flex items-center gap-1 hover:text-brand-500 transition-colors focus:outline-none text-brand-700 font-bold">
+            <a href="#pub-section" title="Research Highlights &amp; Full Bibliography" class="hover:text-brand-500 transition-colors focus:outline-none"><span>Research &amp; Publications</span></a>
             <i data-lucide="chevron-down" class="w-3.5 h-3.5 transition-transform group-hover:rotate-180"></i>
-          </button>
-          <div class="dropdown-menu absolute left-0 top-full w-64 bg-white border border-slate-200 rounded-xl shadow-xl py-2 z-50 text-xs">
-            <a href="#pub-section" onclick="switchPubTab('journals')" class="block px-4 py-2 hover:bg-slate-50 hover:text-brand-700 transition">
-              <span class="font-bold block text-slate-900">30 Peer-Reviewed Articles</span>
-              <span class="text-[11px] text-slate-500">4 Thematic Clusters (60+ citations)</span>
+          </div>
+          <div class="dropdown-menu absolute left-0 top-full w-72 bg-white border border-slate-200 rounded-xl shadow-xl py-2 z-50 text-xs max-h-[75vh] overflow-y-auto">
+
+            <div class="border-b border-slate-100">
+              <div class="flex items-center">
+                <a href="#pub-section" onclick="switchPubTab('journals')" class="flex-1 block px-4 py-2 hover:bg-slate-50 hover:text-brand-700 transition">
+                  <span class="font-bold block text-slate-900">30 Peer-Reviewed Articles</span>
+                  <span class="text-[11px] text-slate-500">4 Thematic Clusters (60+ citations)</span>
+                </a>
+                <button type="button" onclick="toggleSubMenu(this)" aria-label="Show thematic clusters for Peer-Reviewed Articles" class="px-2 self-stretch flex items-center text-slate-400 hover:text-brand-700 transition shrink-0">
+                  <i data-lucide="chevron-down" class="w-3.5 h-3.5 transition-transform"></i>
+                </button>
+              </div>
+              <div class="hidden bg-slate-50/70 pb-1">
+                <a href="#journal-cluster-1" onclick="goToSubsection('journals','journal-cluster-1')" class="block pl-7 pr-4 py-1.5 text-[11px] text-slate-600 hover:text-brand-700 hover:bg-slate-100 transition">I. Comparative Literature &amp; Intercultural Studies <span class="text-slate-400">(9)</span></a>
+                <a href="#journal-cluster-2" onclick="goToSubsection('journals','journal-cluster-2')" class="block pl-7 pr-4 py-1.5 text-[11px] text-slate-600 hover:text-brand-700 hover:bg-slate-100 transition">II. Gender, Feminist Criticism &amp; Women's Studies <span class="text-slate-400">(7)</span></a>
+                <a href="#journal-cluster-3" onclick="goToSubsection('journals','journal-cluster-3')" class="block pl-7 pr-4 py-1.5 text-[11px] text-slate-600 hover:text-brand-700 hover:bg-slate-100 transition">III. Applied Linguistics, ELT &amp; Sociolinguistics <span class="text-slate-400">(9)</span></a>
+                <a href="#journal-cluster-4" onclick="goToSubsection('journals','journal-cluster-4')" class="block pl-7 pr-4 py-1.5 text-[11px] text-slate-600 hover:text-brand-700 hover:bg-slate-100 transition">IV. Canonical English &amp; Bengali Literary Studies <span class="text-slate-400">(5)</span></a>
+              </div>
+            </div>
+
+            <div class="border-b border-slate-100">
+              <div class="flex items-center">
+                <a href="#pub-section" onclick="switchPubTab('conferences')" class="flex-1 block px-4 py-2 hover:bg-slate-50 hover:text-brand-700 transition">
+                  <span class="font-bold block text-slate-900">9 Conference Papers</span>
+                  <span class="text-[11px] text-slate-500">7 International, 2 National</span>
+                </a>
+                <button type="button" onclick="toggleSubMenu(this)" aria-label="Show thematic areas for Conference Papers" class="px-2 self-stretch flex items-center text-slate-400 hover:text-brand-700 transition shrink-0">
+                  <i data-lucide="chevron-down" class="w-3.5 h-3.5 transition-transform"></i>
+                </button>
+              </div>
+              <div class="hidden bg-slate-50/70 pb-1">
+                <a href="#conference-theme-1" onclick="goToSubsection('conferences','conference-theme-1')" class="block pl-7 pr-4 py-1.5 text-[11px] text-slate-600 hover:text-brand-700 hover:bg-slate-100 transition">I. Gender, Feminist Criticism &amp; Psychological Inquiries <span class="text-slate-400">(3)</span></a>
+                <a href="#conference-theme-2" onclick="goToSubsection('conferences','conference-theme-2')" class="block pl-7 pr-4 py-1.5 text-[11px] text-slate-600 hover:text-brand-700 hover:bg-slate-100 transition">II. Post-Colonialism, Resistance &amp; Transcultural Studies <span class="text-slate-400">(3)</span></a>
+                <a href="#conference-theme-3" onclick="goToSubsection('conferences','conference-theme-3')" class="block pl-7 pr-4 py-1.5 text-[11px] text-slate-600 hover:text-brand-700 hover:bg-slate-100 transition">III. Applied Linguistics, Decolonial Pedagogy &amp; Narrative Discourse <span class="text-slate-400">(3)</span></a>
+              </div>
+            </div>
+
+            <div class="border-b border-slate-100">
+              <div class="flex items-center">
+                <a href="#pub-section" onclick="switchPubTab('theses')" class="flex-1 block px-4 py-2 hover:bg-slate-50 hover:text-brand-700 transition">
+                  <span class="font-bold block text-slate-900">72 Supervised Theses</span>
+                  <span class="text-[11px] text-slate-500">Complete Sequential Repository (1-72)</span>
+                </a>
+                <button type="button" onclick="toggleSubMenu(this)" aria-label="Show thematic clusters for Supervised Theses" class="px-2 self-stretch flex items-center text-slate-400 hover:text-brand-700 transition shrink-0">
+                  <i data-lucide="chevron-down" class="w-3.5 h-3.5 transition-transform"></i>
+                </button>
+              </div>
+              <div class="hidden bg-slate-50/70 pb-1">
+                <a href="#thesis-cluster-1" onclick="goToSubsection('theses','thesis-cluster-1')" class="block pl-7 pr-4 py-1.5 text-[11px] text-slate-600 hover:text-brand-700 hover:bg-slate-100 transition">I. Comparative Literature &amp; Intercultural Studies <span class="text-slate-400">(22)</span></a>
+                <a href="#thesis-cluster-2" onclick="goToSubsection('theses','thesis-cluster-2')" class="block pl-7 pr-4 py-1.5 text-[11px] text-slate-600 hover:text-brand-700 hover:bg-slate-100 transition">II. Gender, Feminist Criticism &amp; Women's Studies <span class="text-slate-400">(12)</span></a>
+                <a href="#thesis-cluster-3" onclick="goToSubsection('theses','thesis-cluster-3')" class="block pl-7 pr-4 py-1.5 text-[11px] text-slate-600 hover:text-brand-700 hover:bg-slate-100 transition">III. Canonical English &amp; American Literary Studies <span class="text-slate-400">(14)</span></a>
+                <a href="#thesis-cluster-4" onclick="goToSubsection('theses','thesis-cluster-4')" class="block pl-7 pr-4 py-1.5 text-[11px] text-slate-600 hover:text-brand-700 hover:bg-slate-100 transition">IV. Applied Linguistics, ELT &amp; Educational Policy <span class="text-slate-400">(19)</span></a>
+                <a href="#thesis-cluster-5" onclick="goToSubsection('theses','thesis-cluster-5')" class="block pl-7 pr-4 py-1.5 text-[11px] text-slate-600 hover:text-brand-700 hover:bg-slate-100 transition">V. Cultural Studies, Semiotics &amp; Folklore <span class="text-slate-400">(5)</span></a>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex items-center">
+                <a href="#pub-section" onclick="switchPubTab('articles-blogs')" class="flex-1 block px-4 py-2 hover:bg-slate-50 hover:text-brand-700 transition">
+                  <span class="font-bold block text-slate-900">112 Media &amp; Online Blogs</span>
+                  <span class="text-[11px] text-slate-500">Ittefaq, Teacher's Diary, Memoirs</span>
+                </a>
+                <button type="button" onclick="toggleSubMenu(this)" aria-label="Show categories for Media & Online Blogs" class="px-2 self-stretch flex items-center text-slate-400 hover:text-brand-700 transition shrink-0">
+                  <i data-lucide="chevron-down" class="w-3.5 h-3.5 transition-transform"></i>
+                </button>
+              </div>
+              <div class="hidden bg-slate-50/70 pb-1">
+                <a href="#blog-category-1" onclick="goToSubsection('articles-blogs','blog-category-1')" class="block pl-7 pr-4 py-1.5 text-[11px] text-slate-600 hover:text-brand-700 hover:bg-slate-100 transition">I. Newspaper Editorials &amp; Career Columns <span class="text-slate-400">(1&ndash;2)</span></a>
+                <a href="#blog-category-2" onclick="goToSubsection('articles-blogs','blog-category-2')" class="block pl-7 pr-4 py-1.5 text-[11px] text-slate-600 hover:text-brand-700 hover:bg-slate-100 transition">II. Professional &amp; Corporate Insights (LinkedIn) <span class="text-slate-400">(3&ndash;17)</span></a>
+                <a href="#blog-category-3" onclick="goToSubsection('articles-blogs','blog-category-3')" class="block pl-7 pr-4 py-1.5 text-[11px] text-slate-600 hover:text-brand-700 hover:bg-slate-100 transition">III. Institutional, Reunion &amp; Literary Magazine Essays <span class="text-slate-400">(18&ndash;25)</span></a>
+                <a href="#blog-category-4" onclick="goToSubsection('articles-blogs','blog-category-4')" class="block pl-7 pr-4 py-1.5 text-[11px] text-slate-600 hover:text-brand-700 hover:bg-slate-100 transition">IV. "Shikkhoker Diary" Chronicles &amp; Pedagogy <span class="text-slate-400">(26&ndash;49)</span></a>
+                <a href="#blog-category-5" onclick="goToSubsection('articles-blogs','blog-category-5')" class="block pl-7 pr-4 py-1.5 text-[11px] text-slate-600 hover:text-brand-700 hover:bg-slate-100 transition">V. Socio-Cultural Commentaries, Essays &amp; Digital Trends <span class="text-slate-400">(50&ndash;82)</span></a>
+                <a href="#blog-category-6" onclick="goToSubsection('articles-blogs','blog-category-6')" class="block pl-7 pr-4 py-1.5 text-[11px] text-slate-600 hover:text-brand-700 hover:bg-slate-100 transition">VI. Memoirs, Personal Reflections &amp; Tributes <span class="text-slate-400">(83&ndash;112)</span></a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Education Dropdown -->
+        <div class="relative group py-2">
+          <div class="flex items-center gap-1 hover:text-brand-500 transition-colors focus:outline-none">
+            <a href="#education" title="Education &amp; Professional Credentials" class="hover:text-brand-500 transition-colors focus:outline-none"><span>Education</span></a>
+            <i data-lucide="chevron-down" class="w-3.5 h-3.5 transition-transform group-hover:rotate-180"></i>
+          </div>
+          <div class="dropdown-menu absolute left-0 top-full w-72 bg-white border border-slate-200 rounded-xl shadow-xl py-2 z-50 text-xs">
+            <a href="#education-degrees" class="block px-4 py-2.5 hover:bg-slate-50 hover:text-brand-700 transition">
+              <span class="font-bold block text-slate-900">Education</span>
             </a>
-            <a href="#pub-section" onclick="switchPubTab('conferences')" class="block px-4 py-2 hover:bg-slate-50 hover:text-brand-700 transition border-t border-slate-100">
-              <span class="font-bold block text-slate-900">9 Conference Papers</span>
-              <span class="text-[11px] text-slate-500">7 International, 2 National</span>
+            <a href="#education-diploma" class="block px-4 py-2.5 hover:bg-slate-50 hover:text-brand-700 transition border-t border-slate-100">
+              <span class="font-bold block text-slate-900">Diploma / Courses</span>
+              <span class="text-[11px] text-slate-500">Foreign Language &amp; IT-Related</span>
             </a>
-            <a href="#pub-section" onclick="switchPubTab('theses')" class="block px-4 py-2 hover:bg-slate-50 hover:text-brand-700 transition border-t border-slate-100">
-              <span class="font-bold block text-slate-900">72 Supervised Theses</span>
-              <span class="text-[11px] text-slate-500">Complete Sequential Repository (1-72)</span>
-            </a>
-            <a href="#pub-section" onclick="switchPubTab('articles-blogs')" class="block px-4 py-2 hover:bg-slate-50 hover:text-brand-700 transition border-t border-slate-100">
-              <span class="font-bold block text-slate-900">112 Media &amp; Online Blogs</span>
-              <span class="text-[11px] text-slate-500">Ittefaq, Teacher's Diary, Memoirs</span>
+            <a href="#education-training" class="block px-4 py-2.5 hover:bg-slate-50 hover:text-brand-700 transition border-t border-slate-100">
+              <span class="font-bold block text-slate-900">Training &amp; Seminars Attended</span>
             </a>
           </div>
         </div>
 
-        <a href="#education" class="hover:text-brand-500 transition-colors py-2">Education</a>
-        <a href="#honours" class="hover:text-brand-500 transition-colors py-2">Honours</a>
+        <!-- Honours Dropdown -->
+        <div class="relative group py-2">
+          <div class="flex items-center gap-1 hover:text-brand-500 transition-colors focus:outline-none">
+            <a href="#honours" title="Honours &amp; Institutional Recognition" class="hover:text-brand-500 transition-colors focus:outline-none"><span>Honours</span></a>
+            <i data-lucide="chevron-down" class="w-3.5 h-3.5 transition-transform group-hover:rotate-180"></i>
+          </div>
+          <div class="dropdown-menu absolute left-0 top-full w-72 bg-white border border-slate-200 rounded-xl shadow-xl py-2 z-50 text-xs">
+            <a href="#honours-bup" class="block px-4 py-2.5 hover:bg-slate-50 hover:text-brand-700 transition">
+              <span class="font-bold block text-slate-900">Bangladesh University of Professionals (BUP)</span>
+            </a>
+            <a href="#honours-fu" class="block px-4 py-2.5 hover:bg-slate-50 hover:text-brand-700 transition border-t border-slate-100">
+              <span class="font-bold block text-slate-900">Feni University (FU)</span>
+            </a>
+            <a href="#honours-miu" class="block px-4 py-2.5 hover:bg-slate-50 hover:text-brand-700 transition border-t border-slate-100">
+              <span class="font-bold block text-slate-900">Manarat International University (MIU)</span>
+            </a>
+            <a href="#honours-diu" class="block px-4 py-2.5 hover:bg-slate-50 hover:text-brand-700 transition border-t border-slate-100">
+              <span class="font-bold block text-slate-900">Darul Ihsan University (DIU)</span>
+            </a>
+            <a href="#honours-ccr" class="block px-4 py-2.5 hover:bg-slate-50 hover:text-brand-700 transition border-t border-slate-100">
+              <span class="font-bold block text-slate-900">Rangpur Cadet College (CCR)</span>
+            </a>
+            <a href="#honours-roca" class="block px-4 py-2.5 hover:bg-slate-50 hover:text-brand-700 transition border-t border-slate-100">
+              <span class="font-bold block text-slate-900">Rangpur Old Cadets Association (ROCA)</span>
+            </a>
+            <a href="#honours-fraternities" class="block px-4 py-2.5 hover:bg-slate-50 hover:text-brand-700 transition border-t border-slate-100">
+              <span class="font-bold block text-slate-900">Cadet College / Ex-Cadets' Fraternities</span>
+            </a>
+          </div>
+        </div>
       </nav>
 
       <!-- Action Buttons -->
@@ -1000,7 +1107,7 @@
         </div>
 
         <!-- Category I -->
-        <div>
+        <div id="journal-cluster-1">
           <h3 class="text-base font-bold text-brand-900 bg-brand-50 border-l-4 border-brand-700 px-4 py-2.5 rounded-r-lg mb-4 flex items-center justify-between">
             <span>I. Comparative Literature &amp; Intercultural Studies</span>
             <span class="text-xs font-semibold text-brand-700">9 Articles</span>
@@ -1110,7 +1217,7 @@
         </div>
 
         <!-- Category II -->
-        <div>
+        <div id="journal-cluster-2">
           <h3 class="text-base font-bold text-amber-900 bg-amber-50 border-l-4 border-amber-600 px-4 py-2.5 rounded-r-lg mb-4 flex items-center justify-between">
             <span>II. Gender, Feminist Criticism &amp; Women's Studies</span>
             <span class="text-xs font-semibold text-amber-700">7 Articles</span>
@@ -1198,7 +1305,7 @@
         </div>
 
         <!-- Category III -->
-        <div>
+        <div id="journal-cluster-3">
           <h3 class="text-base font-bold text-emerald-900 bg-emerald-50 border-l-4 border-emerald-600 px-4 py-2.5 rounded-r-lg mb-4 flex items-center justify-between">
             <span>III. Applied Linguistics, ELT &amp; Sociolinguistics</span>
             <span class="text-xs font-semibold text-emerald-700">9 Articles</span>
@@ -1308,7 +1415,7 @@
         </div>
 
         <!-- Category IV -->
-        <div>
+        <div id="journal-cluster-4">
           <h3 class="text-base font-bold text-purple-900 bg-purple-50 border-l-4 border-purple-700 px-4 py-2.5 rounded-r-lg mb-4 flex items-center justify-between">
             <span>IV. Canonical English &amp; Bengali Literary Studies</span>
             <span class="text-xs font-semibold text-purple-700">5 Articles</span>
@@ -1386,7 +1493,7 @@
         </div>
 
         <!-- Theme I -->
-        <div class="space-y-4">
+        <div class="space-y-4" id="conference-theme-1">
           <h3 class="text-base font-bold text-slate-900 border-b border-slate-200 pb-2">
             I. Gender, Feminist Criticism &amp; Psychological Inquiries (3 Papers)
           </h3>
@@ -1419,7 +1526,7 @@
         </div>
 
         <!-- Theme II -->
-        <div class="space-y-4">
+        <div class="space-y-4" id="conference-theme-2">
           <h3 class="text-base font-bold text-slate-900 border-b border-slate-200 pb-2">
             II. Post-Colonialism, Resistance &amp; Transcultural Studies (3 Papers)
           </h3>
@@ -1452,7 +1559,7 @@
         </div>
 
         <!-- Theme III -->
-        <div class="space-y-4">
+        <div class="space-y-4" id="conference-theme-3">
           <h3 class="text-base font-bold text-slate-900 border-b border-slate-200 pb-2">
             III. Applied Linguistics, Decolonial Pedagogy &amp; Narrative Discourse (3 Papers)
           </h3>
@@ -1510,7 +1617,7 @@
         <div id="thesesList" class="space-y-6">
           
           <!-- Cluster I -->
-          <div>
+          <div id="thesis-cluster-1">
             <h4 class="font-bold text-slate-900 text-sm mb-3 bg-slate-100 px-3 py-1.5 rounded">
               I. Comparative Literature &amp; Intercultural Studies (22 Theses &bull; Items 1 &ndash; 22)
             </h4>
@@ -1541,7 +1648,7 @@
           </div>
 
           <!-- Cluster II -->
-          <div>
+          <div id="thesis-cluster-2">
             <h4 class="font-bold text-slate-900 text-sm mb-3 bg-slate-100 px-3 py-1.5 rounded">
               II. Gender, Feminist Criticism &amp; Women's Studies (12 Theses &bull; Items 23 &ndash; 34)
             </h4>
@@ -1562,7 +1669,7 @@
           </div>
 
           <!-- Cluster III -->
-          <div>
+          <div id="thesis-cluster-3">
             <h4 class="font-bold text-slate-900 text-sm mb-3 bg-slate-100 px-3 py-1.5 rounded">
               III. Canonical English &amp; American Literary Studies (14 Theses &bull; Items 35 &ndash; 48)
             </h4>
@@ -1585,7 +1692,7 @@
           </div>
 
           <!-- Cluster IV -->
-          <div>
+          <div id="thesis-cluster-4">
             <h4 class="font-bold text-slate-900 text-sm mb-3 bg-slate-100 px-3 py-1.5 rounded">
               IV. Applied Linguistics, ELT &amp; Educational Policy (19 Theses &bull; Items 49 &ndash; 67)
             </h4>
@@ -1613,7 +1720,7 @@
           </div>
 
           <!-- Cluster V -->
-          <div>
+          <div id="thesis-cluster-5">
             <h4 class="font-bold text-slate-900 text-sm mb-3 bg-slate-100 px-3 py-1.5 rounded">
               V. Cultural Studies, Semiotics &amp; Folklore (5 Theses &bull; Items 68 &ndash; 72)
             </h4>
@@ -1654,7 +1761,7 @@
         <div id="blogList" class="space-y-8">
           
           <!-- Category I: Newspaper Editorials -->
-          <div>
+          <div id="blog-category-1">
             <h4 class="font-bold text-slate-900 text-sm mb-3 bg-slate-100 px-3 py-1.5 rounded flex items-center justify-between">
               <span>I. Newspaper Editorials &amp; Career Columns (The Daily Ittefaq)</span>
               <span class="text-xs font-semibold text-slate-600">Items 1 &ndash; 2</span>
@@ -1666,7 +1773,7 @@
           </div>
 
           <!-- Category II: LinkedIn Professional Articles -->
-          <div>
+          <div id="blog-category-2">
             <h4 class="font-bold text-slate-900 text-sm mb-3 bg-slate-100 px-3 py-1.5 rounded flex items-center justify-between">
               <span>II. Professional &amp; Corporate Insights (LinkedIn Thought Leadership)</span>
               <span class="text-xs font-semibold text-slate-600">Items 3 &ndash; 17</span>
@@ -1691,7 +1798,7 @@
           </div>
 
           <!-- Category III: Institutional & Literary Magazine Essays -->
-          <div>
+          <div id="blog-category-3">
             <h4 class="font-bold text-slate-900 text-sm mb-3 bg-slate-100 px-3 py-1.5 rounded flex items-center justify-between">
               <span>III. Institutional, Reunion &amp; Literary Magazine Essays</span>
               <span class="text-xs font-semibold text-slate-600">Items 18 &ndash; 25</span>
@@ -1709,7 +1816,7 @@
           </div>
 
           <!-- Category IV: Shikkhoker Diary Chronicles -->
-          <div>
+          <div id="blog-category-4">
             <h4 class="font-bold text-slate-900 text-sm mb-3 bg-slate-100 px-3 py-1.5 rounded flex items-center justify-between">
               <span>IV. "Shikkhoker Diary" (Teacher's Diary) Chronicles &amp; Pedagogy</span>
               <span class="text-xs font-semibold text-slate-600">Items 26 &ndash; 49</span>
@@ -1743,7 +1850,7 @@
           </div>
 
           <!-- Category V: Socio-Cultural Commentaries -->
-          <div>
+          <div id="blog-category-5">
             <h4 class="font-bold text-slate-900 text-sm mb-3 bg-slate-100 px-3 py-1.5 rounded flex items-center justify-between">
               <span>V. Socio-Cultural Commentaries, Essays &amp; Digital Trends</span>
               <span class="text-xs font-semibold text-slate-600">Items 50 &ndash; 82</span>
@@ -1786,7 +1893,7 @@
           </div>
 
           <!-- Category VI: Memoirs & Personal Reflections -->
-          <div>
+          <div id="blog-category-6">
             <h4 class="font-bold text-slate-900 text-sm mb-3 bg-slate-100 px-3 py-1.5 rounded flex items-center justify-between">
               <span>VI. Memoirs, Personal Reflections &amp; Tributes</span>
               <span class="text-xs font-semibold text-slate-600">Items 83 &ndash; 112</span>
@@ -1844,7 +1951,7 @@
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
         
         <!-- Degrees Column -->
-        <div class="lg:col-span-6 flex flex-col gap-4 h-full">
+        <div class="lg:col-span-6 flex flex-col gap-4 h-full" id="education-degrees">
           <h3 class="text-base font-bold text-slate-900 uppercase tracking-wider flex items-center gap-2">
             <i data-lucide="graduation-cap" class="w-5 h-5 text-brand-500"></i>
             <span>Education</span>
@@ -1895,7 +2002,7 @@
           </div>
 
           <!-- Diploma / Courses -->
-          <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm page-break transition-all hover:shadow-md flex-1 flex flex-col">
+          <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm page-break transition-all hover:shadow-md flex-1 flex flex-col" id="education-diploma">
             <div class="flex items-center gap-2.5 mb-5 pb-3 border-b border-slate-100">
               <div class="w-8 h-8 rounded-lg bg-brand-50 text-brand-600 flex items-center justify-center shrink-0 border border-brand-100">
                 <i data-lucide="languages" class="w-4 h-4"></i>
@@ -1946,7 +2053,7 @@
         </div>
 
         <!-- Attended Specialized Training Column (Complete 15 from PDF) -->
-        <div class="lg:col-span-6 space-y-4">
+        <div class="lg:col-span-6 space-y-4" id="education-training">
           <h3 class="text-base font-bold text-slate-900 uppercase tracking-wider flex items-center gap-2 mb-4">
             <i data-lucide="certificate" class="w-5 h-5 text-brand-500"></i>
             <span>Training &amp; Seminars Attended</span>
@@ -2104,7 +2211,7 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         
-        <div class="p-5 rounded-xl border border-slate-200 bg-slate-50">
+        <div class="p-5 rounded-xl border border-slate-200 bg-slate-50" id="honours-bup">
           <div class="flex items-center gap-3 mb-2">
             <i data-lucide="award" class="w-5 h-5 text-amber-500"></i>
             <h4 class="font-bold text-slate-900 text-sm">Bangladesh University of Professionals (BUP)</h4>
@@ -2112,7 +2219,7 @@
           <p class="text-xs text-slate-600">Doctoral Research Grant Recipient.</p>
         </div>
 
-        <div class="p-5 rounded-xl border border-slate-200 bg-slate-50">
+        <div class="p-5 rounded-xl border border-slate-200 bg-slate-50" id="honours-fu">
           <div class="flex items-center gap-3 mb-2">
             <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-500"></i>
             <h4 class="font-bold text-slate-900 text-sm">Feni University (FU)</h4>
@@ -2122,7 +2229,7 @@
           </p>
         </div>
 
-        <div class="p-5 rounded-xl border border-slate-200 bg-slate-50">
+        <div class="p-5 rounded-xl border border-slate-200 bg-slate-50" id="honours-miu">
           <div class="flex items-center gap-3 mb-2">
             <i data-lucide="trophy" class="w-5 h-5 text-amber-500"></i>
             <h4 class="font-bold text-slate-900 text-sm">Manarat International University (MIU)</h4>
@@ -2132,7 +2239,7 @@
           </p>
         </div>
 
-        <div class="p-5 rounded-xl border border-slate-200 bg-slate-50">
+        <div class="p-5 rounded-xl border border-slate-200 bg-slate-50" id="honours-diu">
           <div class="flex items-center gap-3 mb-2">
             <i data-lucide="graduation-cap" class="w-5 h-5 text-emerald-500"></i>
             <h4 class="font-bold text-slate-900 text-sm">Darul Ihsan University (DIU)</h4>
@@ -2140,7 +2247,7 @@
           <p class="text-xs text-slate-600">Merit scholarships and on-campus part-time job placement during studies.</p>
         </div>
 
-        <div class="p-5 rounded-xl border border-slate-200 bg-slate-50">
+        <div class="p-5 rounded-xl border border-slate-200 bg-slate-50" id="honours-ccr">
           <div class="flex items-center gap-3 mb-2">
             <i data-lucide="shield" class="w-5 h-5 text-brand-500"></i>
             <h4 class="font-bold text-slate-900 text-sm">Rangpur Cadet College (CCR)</h4>
@@ -2148,7 +2255,7 @@
           <p class="text-xs text-slate-600">College Cultural Prefect (1993-1994) | <strong>Best Disciplined Cadet (1994)</strong>.</p>
         </div>
 
-        <div class="p-5 rounded-xl border border-slate-200 bg-slate-50">
+        <div class="p-5 rounded-xl border border-slate-200 bg-slate-50" id="honours-roca">
           <div class="flex items-center gap-3 mb-2">
             <i data-lucide="users" class="w-5 h-5 text-indigo-500"></i>
             <h4 class="font-bold text-slate-900 text-sm">Rangpur Old Cadets Association (ROCA)</h4>
@@ -2158,7 +2265,7 @@
           </p>
         </div>
 
-        <div class="p-5 rounded-xl border border-slate-200 bg-slate-50 md:col-span-2 lg:col-span-3">
+        <div class="p-5 rounded-xl border border-slate-200 bg-slate-50 md:col-span-2 lg:col-span-3" id="honours-fraternities">
           <div class="flex flex-wrap items-center justify-between gap-4">
             <div>
               <h4 class="font-bold text-slate-900 text-sm">Cadet College / Ex-Cadets' Fraternities</h4>
@@ -2263,6 +2370,28 @@
         }
       });
       lucide.createIcons();
+    }
+
+    // Toggle a subcategory sub-menu open/closed within the Research & Publications nav dropdown
+    function toggleSubMenu(btn) {
+      const row = btn.parentElement;
+      const panel = row.nextElementSibling;
+      if (panel) panel.classList.toggle('hidden');
+      const icon = btn.querySelector('svg, i');
+      if (icon) icon.classList.toggle('rotate-180');
+    }
+
+    // Switch to the correct publications tab, then smoothly scroll to a specific subcategory section
+    function goToSubsection(tabKey, sectionId) {
+      switchPubTab(tabKey);
+      setTimeout(() => {
+        const el = document.getElementById(sectionId);
+        if (el) {
+          const headerOffset = 90;
+          const elementPosition = el.getBoundingClientRect().top + window.pageYOffset;
+          window.scrollTo({ top: elementPosition - headerOffset, behavior: 'smooth' });
+        }
+      }, 50);
     }
 
     // Filter Table function
