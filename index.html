@@ -224,6 +224,13 @@
                 <a href="#pub-section" onclick="switchPubTab('podcast')" class="flex-1 block px-4 py-2 hover:bg-slate-50 hover:text-brand-700 transition">
                   <span class="font-bold block text-slate-900">Podcast &amp; Media</span>
                 </a>
+                <button type="button" onclick="toggleSubMenu(this)" aria-label="Show categories for Podcast & Media" class="px-2 self-stretch flex items-center text-slate-400 hover:text-brand-700 transition shrink-0">
+                  <i data-lucide="chevron-down" class="w-3.5 h-3.5 transition-transform"></i>
+                </button>
+              </div>
+              <div class="hidden bg-slate-50/70 pb-1">
+                <a href="#podcast-category-1" onclick="goToSubsection('podcast','podcast-category-1')" class="block pl-7 pr-4 py-1.5 text-[11px] text-slate-600 hover:text-brand-700 hover:bg-slate-100 transition">I. Podcast <span class="text-slate-400">(1)</span></a>
+                <a href="#podcast-category-2" onclick="goToSubsection('podcast','podcast-category-2')" class="block pl-7 pr-4 py-1.5 text-[11px] text-slate-600 hover:text-brand-700 hover:bg-slate-100 transition">II. Media Links <span class="text-slate-400">(2&ndash;3)</span></a>
               </div>
             </div>
 
@@ -1959,13 +1966,39 @@
       </div>
 
 
-      <!-- TAB 5: Podcast -->
+      <!-- TAB 5: Podcast & Media -->
       <div id="tab-content-podcast" class="tab-content hidden space-y-8">
+
+        <div class="bg-amber-50/70 border border-amber-200 rounded-xl p-4 flex items-center justify-center gap-3 text-xs text-amber-900">
+          <span class="flex items-center gap-2 font-medium">
+            <i data-lucide="badge-check" class="w-4 h-4 text-amber-600 shrink-0"></i>
+            Professional Podcast &amp; Media Links (2023 &ndash; Present)
+          </span>
+        </div>
+
+        <!-- Category I: Podcast -->
         <div id="podcast-category-1">
+          <h4 class="font-bold text-slate-900 text-sm mb-3 bg-slate-100 px-3 py-1.5 rounded flex items-center justify-between">
+            <span>I. Podcast</span>
+            <span class="text-xs font-semibold text-slate-600">Item 1</span>
+          </h4>
           <ol start="1" class="space-y-2 text-xs sm:text-sm text-slate-700 list-decimal list-inside pl-1">
-            <li class="p-2 bg-slate-50 rounded"><a href="https://www.facebook.com/reel/1334248007939804" target="_blank" rel="noopener noreferrer" class="hover:text-brand-700 hover:underline transition-colors"><strong>কমিউনিকেশন স্কিলস [Communication Skills]. PodBhai Podcast, November 2025</strong> <i data-lucide="external-link" class="w-3 h-3 inline-block text-purple-400 align-text-top"></i></a></li>
+            <li class="p-2 bg-slate-50 rounded"><a href="https://www.facebook.com/share/v/1ctgkL3vaW/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-700 hover:underline transition-colors"><strong>"Communication Skills: From Words to Impact"</strong>. <em>PodBhai Podcast</em>, November 2025. <i data-lucide="external-link" class="w-3 h-3 inline-block text-purple-400 align-text-top"></i></a></li>
           </ol>
         </div>
+
+        <!-- Category II: Media Links -->
+        <div id="podcast-category-2">
+          <h4 class="font-bold text-slate-900 text-sm mb-3 bg-slate-100 px-3 py-1.5 rounded flex items-center justify-between">
+            <span>II. Media Links</span>
+            <span class="text-xs font-semibold text-slate-600">Items 2 &ndash; 3</span>
+          </h4>
+          <ol start="2" class="space-y-2 text-xs sm:text-sm text-slate-700 list-decimal list-inside pl-1">
+            <li class="p-2 bg-slate-50 rounded"><a href="https://www.facebook.com/share/v/1DqChAShmj/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-700 hover:underline transition-colors"><strong>"Message of the Acting Dean of the Faculty of Arts, Social Science and Law (FASSL) and Additional Director of the Institutional Quality Assurance Cell (IQAC)"</strong> [from 1:08 min]. <em>Department of English, Feni University</em>, May 2026. <i data-lucide="external-link" class="w-3 h-3 inline-block text-purple-400 align-text-top"></i></a></li>
+            <li class="p-2 bg-slate-50 rounded"><a href="https://youtu.be/l1HD9uw0FWE?feature=shared" target="_blank" rel="noopener noreferrer" class="hover:text-brand-700 hover:underline transition-colors"><strong>"Message of the Head of English"</strong>. <em>Manarat International University</em>, May 2023. <i data-lucide="external-link" class="w-3 h-3 inline-block text-purple-400 align-text-top"></i></a></li>
+          </ol>
+        </div>
+
       </div>
 
     </div>
