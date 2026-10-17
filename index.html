@@ -113,17 +113,17 @@
       </div>
 
       <!-- Desktop Navigation Menu with Clean Dropdowns -->
-      <nav class="hidden lg:flex items-center space-x-5 text-xs xl:text-sm font-semibold text-slate-600">
+      <nav class="hidden lg:flex items-center space-x-3 xl:space-x-4 text-[11px] xl:text-[12px] leading-tight text-center font-semibold text-slate-600">
         <a href="#about" class="hover:text-brand-500 transition-colors py-2">Executive Profile</a>
-        <a href="#competencies" class="hover:text-brand-500 transition-colors py-2">Core Competencies</a>
+        <a href="#competencies" class="hover:text-brand-500 transition-colors py-2">Capability Matrix</a>
         
         <!-- Leadership Dropdown -->
         <div class="relative group py-2">
           <div class="flex items-center gap-1 hover:text-brand-500 transition-colors focus:outline-none">
-            <a href="#leadership" title="Academic Leadership Experience" class="hover:text-brand-500 transition-colors focus:outline-none"><span>Academic Leadership</span></a>
+            <a href="#leadership" title="Academic Leadership Experience" class="hover:text-brand-500 transition-colors focus:outline-none"><span>Leadership&nbsp;&amp; Experience</span></a>
             <i data-lucide="chevron-down" class="w-3.5 h-3.5 transition-transform group-hover:rotate-180"></i>
           </div>
-          <div class="dropdown-menu absolute left-0 top-full w-64 bg-white border border-slate-200 rounded-xl shadow-xl py-2 z-50 text-xs">
+          <div class="dropdown-menu text-left absolute left-0 top-full w-64 bg-white border border-slate-200 rounded-xl shadow-xl py-2 z-50 text-xs">
             <a href="#feni-university" class="block px-4 py-2.5 hover:bg-slate-50 hover:text-brand-700 transition">
               <span class="font-bold block text-slate-900">Feni University</span>
               <span class="text-[11px] text-slate-500">Dean, IQAC Addl. Dir, Assoc. Prof.</span>
@@ -139,15 +139,15 @@
           </div>
         </div>
 
-        <a href="#consulting-table" class="hover:text-brand-500 transition-colors py-2">Training Matrix</a>
+        <a href="#consulting-table" class="hover:text-brand-500 transition-colors py-2">Consultancy &amp; Training</a>
 
         <!-- Research, Pubs & Media Dropdown -->
         <div class="relative group py-2">
           <div class="flex items-center gap-1 hover:text-brand-500 transition-colors focus:outline-none">
-            <a href="#pub-section" title="Research, Publications &amp; Media Highlights" class="hover:text-brand-500 transition-colors focus:outline-none"><span>Research / Publications / Media Links</span></a>
+            <a href="#pub-section" title="Research, Publications &amp; Media Highlights" class="hover:text-brand-500 transition-colors focus:outline-none"><span>Research &amp; Publications</span></a>
             <i data-lucide="chevron-down" class="w-3.5 h-3.5 transition-transform group-hover:rotate-180"></i>
           </div>
-          <div class="dropdown-menu absolute left-0 top-full w-72 bg-white border border-slate-200 rounded-xl shadow-xl py-2 z-50 text-xs max-h-[75vh] overflow-y-auto">
+          <div class="dropdown-menu text-left absolute left-0 top-full w-72 bg-white border border-slate-200 rounded-xl shadow-xl py-2 z-50 text-xs max-h-[75vh] overflow-y-auto">
 
             <div class="border-b border-slate-100">
               <div class="flex items-center">
@@ -223,31 +223,28 @@
               </div>
             </div>
 
-            <div>
-              <div class="flex items-center">
-                <a href="#pub-section" onclick="switchPubTab('podcast')" class="flex-1 block px-4 py-2 hover:bg-slate-50 hover:text-brand-700 transition">
-                  <span class="font-bold block text-slate-900">Podcast &amp; Media</span>
-                </a>
-                <button type="button" onclick="toggleSubMenu(this)" aria-label="Show categories for Podcast & Media" class="px-2 self-stretch flex items-center text-slate-400 hover:text-brand-700 transition shrink-0">
-                  <i data-lucide="chevron-down" class="w-3.5 h-3.5 transition-transform"></i>
-                </button>
-              </div>
-              <div class="hidden bg-slate-50/70 pb-1">
-                <a href="#podcast-category-1" onclick="goToSubsection('podcast','podcast-category-1')" class="block pl-7 pr-4 py-1.5 text-[11px] text-slate-600 hover:text-brand-700 hover:bg-slate-100 transition">I. Podcast / Interview / Media Link <span class="text-slate-400">(1&ndash;3)</span></a>
-                <a href="#podcast-category-2" onclick="goToSubsection('podcast','podcast-category-2')" class="block pl-7 pr-4 py-1.5 text-[11px] text-slate-600 hover:text-brand-700 hover:bg-slate-100 transition">II. Professional Address <span class="text-slate-400">(4&ndash;11)</span></a>
-              </div>
-            </div>
+          </div>
+        </div>
 
+        <!-- Podcast & Media Dropdown -->
+        <div class="relative group py-2">
+          <div class="flex items-center gap-1 hover:text-brand-500 transition-colors focus:outline-none">
+            <a href="#pub-section" onclick="switchPubTab('podcast')" title="Podcast &amp; Media" class="hover:text-brand-500 transition-colors focus:outline-none"><span>Podcast &amp; Media</span></a>
+            <i data-lucide="chevron-down" class="w-3.5 h-3.5 transition-transform group-hover:rotate-180"></i>
+          </div>
+          <div class="dropdown-menu text-left absolute left-0 top-full w-72 bg-white border border-slate-200 rounded-xl shadow-xl py-2 z-50 text-xs">
+            <a href="#podcast-category-1" onclick="goToSubsection('podcast','podcast-category-1')" class="block px-4 py-2.5 font-bold text-slate-900 hover:bg-slate-50 hover:text-brand-700 transition">I. Podcast / Interview / Media Link <span class="text-slate-400">(1&ndash;3)</span></a>
+            <a href="#podcast-category-2" onclick="goToSubsection('podcast','podcast-category-2')" class="block px-4 py-2.5 font-bold text-slate-900 hover:bg-slate-50 hover:text-brand-700 border-t border-slate-100 transition">II. Professional Address <span class="text-slate-400">(4&ndash;11)</span></a>
           </div>
         </div>
 
         <!-- Education Dropdown -->
         <div class="relative group py-2">
           <div class="flex items-center gap-1 hover:text-brand-500 transition-colors focus:outline-none">
-            <a href="#education" title="Education &amp; Professional Credentials" class="hover:text-brand-500 transition-colors focus:outline-none"><span>Education / Diploma / Training</span></a>
+            <a href="#education" title="Education &amp; Professional Credentials" class="hover:text-brand-500 transition-colors focus:outline-none"><span>Education &amp; Training</span></a>
             <i data-lucide="chevron-down" class="w-3.5 h-3.5 transition-transform group-hover:rotate-180"></i>
           </div>
-          <div class="dropdown-menu absolute left-0 top-full w-72 bg-white border border-slate-200 rounded-xl shadow-xl py-2 z-50 text-xs">
+          <div class="dropdown-menu text-left absolute left-0 top-full w-72 bg-white border border-slate-200 rounded-xl shadow-xl py-2 z-50 text-xs">
             <a href="#education-degrees" class="block px-4 py-2.5 hover:bg-slate-50 hover:text-brand-700 transition">
               <span class="font-bold block text-slate-900">Education</span>
             </a>
@@ -264,10 +261,10 @@
         <!-- Honours Dropdown -->
         <div class="relative group py-2">
           <div class="flex items-center gap-1 hover:text-brand-500 transition-colors focus:outline-none">
-            <a href="#honours" title="Honours &amp; Institutional Recognition" class="hover:text-brand-500 transition-colors focus:outline-none"><span>Honours &amp; Institutional Recognition</span></a>
+            <a href="#honours" title="Honours &amp; Institutional Recognition" class="hover:text-brand-500 transition-colors focus:outline-none"><span>Honours &amp; Recognition</span></a>
             <i data-lucide="chevron-down" class="w-3.5 h-3.5 transition-transform group-hover:rotate-180"></i>
           </div>
-          <div class="dropdown-menu absolute left-0 top-full w-72 bg-white border border-slate-200 rounded-xl shadow-xl py-2 z-50 text-xs">
+          <div class="dropdown-menu text-left absolute left-0 top-full w-72 bg-white border border-slate-200 rounded-xl shadow-xl py-2 z-50 text-xs">
             <a href="#honours-bup" class="block px-4 py-2.5 hover:bg-slate-50 hover:text-brand-700 transition">
               <span class="font-bold block text-slate-900">Bangladesh University of Professionals (BUP)</span>
             </a>
@@ -309,15 +306,16 @@
     <!-- Mobile Scrollable Navigation Bar -->
     <div class="lg:hidden border-t border-slate-200 bg-white overflow-x-auto whitespace-nowrap px-4 py-2.5 flex items-center gap-4 text-xs font-semibold text-slate-600">
       <a href="#about" class="hover:text-brand-500">Executive Profile</a>
-      <a href="#competencies" class="hover:text-brand-500">Core Competencies</a>
-      <a href="#leadership" class="hover:text-brand-500">Academic Leadership</a>
-      <a href="#consulting-table" class="hover:text-brand-500">Training Matrix</a>
+      <a href="#competencies" class="hover:text-brand-500">Capability Matrix</a>
+      <a href="#leadership" class="hover:text-brand-500">Leadership &amp; Experience</a>
+      <a href="#consulting-table" class="hover:text-brand-500">Consultancy &amp; Training</a>
       <a href="#pub-section" class="hover:text-brand-500 text-brand-700">Publications (30)</a>
       <a href="#pub-section" onclick="switchPubTab('conferences')" class="hover:text-brand-500">Conferences (9)</a>
       <a href="#pub-section" onclick="switchPubTab('theses')" class="hover:text-brand-500">Theses (72)</a>
-      <a href="#pub-section" onclick="switchPubTab('articles-blogs')" class="hover:text-brand-500">Articles &amp; Blogs (113)</a>
-      <a href="#education" class="hover:text-brand-500">Education / Diploma / Training</a>
-      <a href="#honours" class="hover:text-brand-500">Honours &amp; Institutional Recognition</a>
+      <a href="#pub-section" onclick="switchPubTab('articles-blogs')" class="hover:text-brand-500">Columns &amp; Blogs (113)</a>
+      <a href="#pub-section" onclick="switchPubTab('podcast')" class="hover:text-brand-500">Podcast &amp; Media</a>
+      <a href="#education" class="hover:text-brand-500">Education &amp; Training</a>
+      <a href="#honours" class="hover:text-brand-500">Honours &amp; Recognition</a>
     </div>
   </header>
 
@@ -340,9 +338,6 @@
                 class="w-full h-full object-contain filter contrast-105"
               />
             </div>
-            <span class="absolute bottom-3 right-3 bg-white/95 text-brand-800 text-xs font-bold px-3 py-1 rounded-md backdrop-blur border border-brand-200 flex items-center gap-1.5 shadow-lg">
-              <i data-lucide="shield-check" class="w-3.5 h-3.5 text-amber-500"></i> PhD Fellow (CHSR, BUP)
-            </span>
           </div>
 
           <!-- Quick Communications -->
@@ -534,7 +529,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center max-w-3xl mx-auto mb-12">
-        <span class="text-brand-500 font-bold text-xs uppercase tracking-widest">Capabilities Matrix</span>
+        <span class="text-brand-500 font-bold text-xs uppercase tracking-widest">Capability Matrix</span>
         <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight font-serif mt-1">Core Competencies</h2>
         <div class="w-12 h-1 bg-amber-500 mx-auto mt-3 rounded-full"></div>
       </div>
@@ -1100,11 +1095,11 @@
         </button>
         <button id="tab-btn-articles-blogs" onclick="switchPubTab('articles-blogs')" class="min-w-0 min-h-[52px] sm:min-h-[56px] px-1.5 sm:px-4 py-2 rounded-xl text-[10px] sm:text-sm font-bold transition-all shadow-sm border bg-white text-slate-700 border-slate-300 hover:bg-slate-50 flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2 text-center">
           <i data-lucide="newspaper" class="w-4 h-4 shrink-0"></i>
-          <span class="leading-tight">Articles &amp; Blogs (113)</span>
+          <span class="leading-tight">Columns &amp; Blogs (113)</span>
         </button>
         <button id="tab-btn-podcast" onclick="switchPubTab('podcast')" class="min-w-0 min-h-[52px] sm:min-h-[56px] px-1.5 sm:px-4 py-2 rounded-xl text-[10px] sm:text-sm font-bold transition-all shadow-sm border bg-white text-slate-700 border-slate-300 hover:bg-slate-50 flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2 text-center">
           <i data-lucide="mic" class="w-4 h-4 shrink-0"></i>
-          <span class="leading-tight">Podcast &amp; Media</span>
+          <span class="leading-tight">Podcast &amp; Media (11)</span>
         </button>
       </div>
 
